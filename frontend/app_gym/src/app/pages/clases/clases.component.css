@@ -1,0 +1,47 @@
+/* Ajustar estilos de los cards */
+.card {
+    margin-bottom: 20px;
+    background-color: rgb(17, 14, 14);
+    opacity: 1.0;
+    border: groove;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Este es el logo de la esquina*/
+
+  .esquina img {
+    height:300px ;
+    width: 300px;
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Cambiar el color del texto de las cards */
+.card-title {
+    color: #666666;
+}
+
+.card-text {
+    color: #bbbbbb;
+
+}
+
+
+.welcome-text h1 {
+    -webkit-text-stroke: 1px black; /* Borde negro de 2px */
+    color: transparent; /* Hace que el texto sea transparente */
+}
+
+/*Con este estilo limito la imagen a la resolucion deseada para mostrar*/
+img.rounded-circle {
+  max-width: 500px; /* Anchura */
+  max-height: 400px; /* Altura */
+}

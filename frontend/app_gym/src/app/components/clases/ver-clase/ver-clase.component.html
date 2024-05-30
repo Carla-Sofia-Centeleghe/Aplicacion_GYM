@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-4" *ngFor="let clase of arrayClases">
+        <a routerLink="/clase-puntual"> 
+            <div class="card">
+                <img [src]="clase.imagen" class="rounded-circle" alt="Clase 1">
+                <div class="card-body">
+                    <h5 class="card-title">{{clase.clase_id}} {{clase.detalles}}</h5>
+                    <p class="card-text">{{clase.detallesgenerales}}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+

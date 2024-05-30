@@ -1,0 +1,9 @@
+.custom-rutina {
+    background-color: rgb(160, 161, 161); /* You can change "lightblue" to any color you prefer */
+  }
+  
+  
+  /*color distinto para el contenido de las rutinas */
+  .custom-bg-color {
+    background-color: rgb(107, 107, 107); /* You can change "lightgreen" to any color you prefer */
+  }

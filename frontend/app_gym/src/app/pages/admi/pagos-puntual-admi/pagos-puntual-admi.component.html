@@ -1,0 +1,54 @@
+<app-navegacion></app-navegacion>
+
+<div class="background-image">
+    <div class="esquina">
+        <img src="assets/mano-sosteniendo-mancuernas-mancuernas.png" alt="logo">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-2 text-center welcome-text">
+                <h1>Pagos:</h1>
+            </div>
+        </div>
+    <div class="container mt-8">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="row justify-content-center">
+                    <form [formGroup]="abmalumno">
+                        <div class="input-group">
+                            <input type="nombre" id="nombre" name="nombre" class="form-control" formControlName="nombre" placeholder="Nombre">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="apellido" name="apellido" class="form-control" formControlName="apellido" placeholder="Apellido">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="text" id="estado-de-la-cuenta" name="estado-de-la-cuenta" class="form-control" formControlName="estado_de_la_cuenta" placeholder="Estado-de-la-cuenta">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="toggle"></div>
+                            <input type="date" id="fecha" name="fecha" class="form-control small-input" formControlName="fecha_pago" placeholder="Fecha" >
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                    </form>    
+                </div> 
+            </div>
+            <button class="btn btn-success btn-sm ml-2" id="guardar-button" (click)="submit_student(arrayAlumno[0].id_Alumno)" >Guardar Cambios </button>
+            
+        </div>
+    </div>
+    </div>  
+</div>
+<app-footer></app-footer>

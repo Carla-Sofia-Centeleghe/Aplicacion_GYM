@@ -1,0 +1,40 @@
+    <app-navegacion></app-navegacion>
+ <!-- Aca va la imagen de fondo --->
+<div class="background-image">
+    <div class="esquina">
+        <!-- Aca va el logo de la esquina --->
+        <img src="assets/mano-sosteniendo-mancuernas-mancuernas.png" alt="logo">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center welcome-text">
+                <h1>Pagos:</h1>
+            </div>
+        </div>
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center welcome-text">
+
+                </div>
+            </div>
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control"  [(ngModel)]="search_value" placeholder="Ingrese el nombre o apellido del alumno...">
+                            <div class="input-group-append">
+
+                                <button class="card btn btn-outline-secondary btn-lg" type="button" (click)="capture_search_value(search_value)">Buscar</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div  *ngIf= "showVerAlumnos">
+                        <app-pagos> [someInput]="changingValue"</app-pagos>
+
+                    </div>     
+                </div>
+        </div>
+     
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,31 @@
+<app-navegacion></app-navegacion>
+<!-- Aca va el logo de la esquina --->
+
+ <!-- Aca va la imagen de fondo --->
+<div class="background-image">
+    <div class="esquina">
+        <img src="assets/mano-sosteniendo-mancuernas-mancuernas.png" alt="logo">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="title-with-image">
+                    <h1>Clases</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2">
+        <div class="row mt-5">
+            <div class="col-md-4" *ngFor="let clase of arrayClases">
+                <div class="card">
+                    <div class="card-body">
+                        
+                        <a class="nav-link" (click)="seleccionarclase(clase.id_Clase)"> {{clase.id_Clase}} {{clase.detalles}}</a> 
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+</div>
+<app-footer></app-footer>

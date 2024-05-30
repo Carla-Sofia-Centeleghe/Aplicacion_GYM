@@ -1,0 +1,18 @@
+<ul class="list-group mt-3">
+    <li class="list-group-item d-flex justify-content-between align-items-center custom-rutina"  *ngFor="let alumno of arrayUsuario" >
+        {{alumno.id_Usuario }}. {{alumno.nombre}} , {{alumno.apellido}}
+        <div> 
+            <button class="btn btn-danger btn-sm me-2" (click)="editButton(alumno.id_Usuario)" routerLink="/pagos-puntual-admi">Abrir</button>
+            
+        </div> 
+    </li>
+</ul>    
+
+
+<igx-paginator #paginator
+   [perPage]="1"
+   [selectOptions]="[4,3,2,1]" 
+   [totalRecords]="totalPages"
+   (pageChange)="changepage($event+1)"
+   (perPageChange)="navigateToFirstPage()">
+</igx-paginator> 

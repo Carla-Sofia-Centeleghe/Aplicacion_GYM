@@ -1,0 +1,47 @@
+<app-navegacion></app-navegacion>
+ <!-- Aca va la imagen de fondo --->
+<div class="background-image">
+    <div class="esquina">
+        <img src="assets/mano-sosteniendo-mancuernas-mancuernas.png" alt="logo">
+    </div>
+
+    <div class="container mt-6">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <h1 class="card-title text-center">Crear rutina</h1>
+                    <div class="row justify-content-center">
+                        <div class="toggle-container">
+                            <form [formGroup]="rutinaForm">
+                                <div class="col-md-12 mt-0.2 text-left">
+                                    <div class="toggle"></div>
+                                    <label for="estado">Estado</label>
+                                    <input type="text" id="estado" name="estado" class="form-control" formControlName="estado" placeholder="estado">   
+                                </div>
+                                <div class="col-md-12 mt-0.2 text-left">
+                                  <div class="toggle"></div>
+                                  <label for="fecha">Fecha</label>
+                                  <input type="date" id="fecha" formControlName="fecha" class="form-control small-input"  >
+                                </div>
+                                <div class="col-md-12 mt-3 text-left">
+                                  <div class="toggle"></div>
+                                  <label for="detalles">Descripción:</label>
+                                  <input type="text" id="detalles" formControlName="detalles" class="form-control-description" >
+                                </div>
+                            </form>
+                              
+                        </div>
+                        <div class="col-md-12 mt-3 text-center">
+                            <a class="nav-link" routerLink="/rutina-abm"> 
+                                <button class="btn btn-danger" (click)="guardarRutina()">Guardar</button> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

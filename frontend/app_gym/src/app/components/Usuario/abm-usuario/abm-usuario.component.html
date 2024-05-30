@@ -1,0 +1,201 @@
+<div class="container mt-8"  >
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="row justify-content-center">
+                <form [formGroup]="abmalumno"  *ngIf="mybuttonId == 1">    
+                        <div class="input-group">
+                        <input type="nombre" id="nombre" name="nombre" class="form-control" formControlName="nombre" placeholder="Nombre">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="apellido" name="apellido" class="form-control" formControlName="apellido" placeholder="Apellido">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="mail" name="mail" class="form-control" formControlName="mail" placeholder="Mail">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="documento" name="documento" class="form-control" formControlName="documento" placeholder="Documento">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="telefono" name="telefono" class="form-control" formControlName="telefono" placeholder="Telefono">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="password" name="password" class="form-control" value="Contraseña" >
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="edad" name="edad" class="form-control" formControlName="edad" placeholder="Edad">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <select id="text" name="sexo" class="form-control" formControlName="sexo" placeholder="Sexo">
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                            </div>
+                        </div>
+
+    
+                        <button class="btn btn-sm btn-custom2 ml-2" (click)="confirmDelete_User(arrayAlumno[0].alumno_detalle.id_Usuario)">
+                            Eliminar
+                          </button>
+                          <button class="btn btn-sm btn-custom1 ml-2" (click)="submit_student(arrayAlumno[0].alumno_detalle.id_Usuario)">Guardar</button>
+                        
+
+                </form>
+                <form [formGroup]="abmprofesor" *ngIf="mybuttonId == 2">    
+                    <div class="input-group">
+                    <input type="nombre" id="nombre" name="nombre" class="form-control" formControlName="nombre" placeholder="Nombre">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="apellido" name="apellido" class="form-control" formControlName="apellido" placeholder="Apellido">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="mail" name="mail" class="form-control" formControlName="mail" placeholder="Mail">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="documento" name="documento" class="form-control" formControlName="documento" placeholder="Documento">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="telefono" name="telefono" class="form-control" formControlName="telefono" placeholder="Telefono">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" class="form-control" value="Contraseña" >
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="edad" name="edad" class="form-control" formControlName="edad" placeholder="Edad">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <select id="text" name="sexo" class="form-control" formControlName="sexo" placeholder="Sexo">
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="input-group"  >
+                        <input type="text" id="titulo" name="titulo" class="form-control" formControlName="titulo" placeholder="Titulo">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="input-group" >
+                        <input type="text" id="disponibilidad" name="disponibilidad" class="form-control" formControlName="disponibilidad" placeholder="Disponibilidad">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                                    
+                    <button class="btn btn-sm btn-custom2 ml-2" (click)="confirmDelete_User(arrayProfesor[0].profesor_detalle.id_Usuario)">
+                        Eliminar
+                      </button>
+                      <button class="btn btn-sm btn-custom1 ml-2" (click)="submit_teacher(arrayProfesor[0].profesor_detalle.id_Usuario,arrayProfesor[0].id_Profesor)">Guardar</button>
+                </form>
+                <form [formGroup]="abmadmin"  *ngIf="mybuttonId == 3">    
+                    <div class="input-group">
+                    <input type="nombre" id="nombre" name="nombre" class="form-control" formControlName="nombre" placeholder="Nombre">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="apellido" name="apellido" class="form-control" formControlName="apellido" placeholder="Apellido">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="mail" name="mail" class="form-control" formControlName="mail" placeholder="Mail">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="documento" name="documento" class="form-control" formControlName="documento" placeholder="Documento">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="telefono" name="telefono" class="form-control" formControlName="telefono" placeholder="Telefono">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" class="form-control" value="Contraseña" >
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="edad" name="edad" class="form-control" formControlName="edad" placeholder="Edad">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <select id="text" name="sexo" class="form-control" formControlName="sexo" placeholder="Sexo">
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" type="button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-sm btn-custom1 ml-2" (click)="submit_user(arrayAdmin.id_Usuario)">Guardar cambios</button>
+                    
+            </form>
+            </div> 
+        </div>    
+    </div>
+</div>
+

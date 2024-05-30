@@ -1,0 +1,68 @@
+<app-navegacion></app-navegacion>
+<div class="background-image">
+    <div class="esquina">
+        <img src="assets/mano-sosteniendo-mancuernas-mancuernas.png" alt="logo">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center welcome-text">
+
+                <h1>!Hola! {{mybuttonId}}</h1>
+            </div>
+        </div>
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center welcome-text">
+                </div>
+            </div>
+            <div *ngIf="mybuttonId == 1" class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <a class="nav-link" (click)="redirectToNuevoAlumno()" >Nuevo Alumno </a>                   
+                        </div>
+                    </div>
+                </div>
+                
+                <div  class="col-md-4">
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" [(ngModel)]="search_value"  placeholder="Ingrese el nombre o apellido del alumno...">
+                        <div class="input-group-append">
+                            <button  class="card btn btn-outline-secondary btn-lg" type="button" (click)="capture_search_value(search_value)">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+  
+                <div  *ngIf= "showVerAlumnos">
+                    <app-ver-alumnos [someInput]="changingValue"></app-ver-alumnos>
+                </div>
+
+
+            </div>
+            <div *ngIf="mybuttonId == 2" class="row mt-5">
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <a class="nav-link" (click)="redirectToNuevoProfesor()">Nuevo Profesor </a>                   
+                        </div>
+                    </div>
+                </div>
+                <div  class="col-md-4">
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" [(ngModel)]="search_value" placeholder="Ingrese el nombre o apellido del profesor...">
+                        <div class="input-group-append">
+                            <button  class="card btn btn-outline-secondary btn-lg" type="button" (click)="captura_search_value(search_value)">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div  *ngIf= "showVerProfesor">
+                    <app-ver-profesores [someInput]="changingValue"></app-ver-profesores>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

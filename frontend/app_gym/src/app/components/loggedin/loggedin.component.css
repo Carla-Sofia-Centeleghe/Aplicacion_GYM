@@ -1,0 +1,87 @@
+/* Ajustar estilos de los cards */
+.card {
+  margin-bottom: 15px;
+  background-color: rgb(186, 175, 175);
+  opacity: 1.0;
+  border: groove;
+  box-shadow: 0 4px 8px rgba(251, 247, 247, 0.1);
+  text-align: center; /* Center content within cards */
+}
+
+/* Remove button width restrictions 
+.card-block1 .btn,
+.card-block2 .btn {
+  width: 100%;
+}*/
+
+/*  le doy el borde redondo a la foto */
+.rounded-circle {
+border-radius: 20% !important;
+}
+
+
+/*  agrando el tamaño de la tajeta*/
+.row > * {
+
+width: 100%;
+
+}
+
+/*  fuente para el texto de bienvenida*/
+.col-md-8 {
+  font-family: 'Praise', sans-serif; /* Replace 'Your Font' with the desired font name */
+  /* Add any other styling you desire */
+  display: flex;
+  justify-content: left;
+}
+
+
+.h1, h1 {
+  font-size: 6rem;
+  color:  rgb(243, 0, 0) ;
+}
+
+/* Este es el logo de la esquina*/
+.esquina img {
+  height:300px ;
+  width: 300px;
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Es el titulo de la clase, con tamaño, tipo de fuente, color blanco y centrado */
+.card-title {
+  font-family: 'Praise', sans-serif; 
+  font-size: 500px; 
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.card-text {
+  color: #fefefe;
+
+}
+
+/* Estilos para el footer */
+.footer {
+  text-align: center;
+  background-color: #000000;
+  border-top: 1px solid #000000;
+}
+
+
+/* Con esto le doy color rojo al texto de la clase */
+.main-text {
+
+  color: rgb(0, 0, 0);
+
+}
+
+

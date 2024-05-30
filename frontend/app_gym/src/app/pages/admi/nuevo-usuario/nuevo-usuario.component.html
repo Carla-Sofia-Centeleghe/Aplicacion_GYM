@@ -1,0 +1,112 @@
+<app-navegacion></app-navegacion>
+<!-- Aca va el logo de la esquina --->
+
+ <!-- Aca va la imagen de fondo --->
+<div class="background-image">
+    <div class="esquina">
+        <img src="assets/mano-sosteniendo-mancuernas-mancuernas.png" alt="logo">
+    </div>
+    
+    <div class="container mt-6">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    
+                        <h1 *ngIf="mybuttonId == 1" class="card-title text-center">Crear nuevo Alumno</h1>
+                        <h1 *ngIf="mybuttonId == 2" class="card-title text-center">Crear nuevo Profesor</h1>
+
+                <form [formGroup]="abmusuario">
+                    <div class="row justify-content-center">
+                        <div class="toggle-container">
+                            <div class="col-md-9 mt-1 text-left">
+                                <div class="toggle"></div>
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="nombre" id="nombre" name="nombre" class="form-control" formControlName="nombre" placeholder="Nombre">
+                                <div *ngIf="abmusuario.get('nombre')?.invalid && (abmusuario.get('nombre')?.dirty || abmusuario.get('nombre')?.touched)" class="text-danger">
+                                    {{ getErrorMessage('nombre') }}
+                                </div>
+                            </div>
+                            <div class="col-md-9 mt-1 text-left">
+                                <label for="apellido" class="form-label">Apellido</label>
+                                <input type="apellido" id="apellido" name="apellido" class="form-control" formControlName="apellido" placeholder="Apellido">
+                                <div *ngIf="abmusuario.get('apellido')?.invalid && (abmusuario.get('apellido')?.dirty || abmusuario.get('apellido')?.touched)" class="text-danger">
+                                    {{ getErrorMessage('apellido') }}
+                                </div>
+                            </div>
+                            <div class="col-md-9 mt-1 text-left">
+                                <label for="mail" class="form-label">Correo Electrónico</label>
+                                <input type="mail" id="mail" name="mail" class="form-control" formControlName="mail" placeholder="Mail">
+                                <div *ngIf="abmusuario.get('mail')?.invalid && (abmusuario.get('mail')?.dirty || abmusuario.get('mail')?.touched)" class="text-danger">
+                                    {{ getErrorMessage('mail') }}
+                                </div>
+                            </div>
+                            <div class="col-md-9 mt-1 text-left">
+                                <label for="telefono" class="form-label">Número de Teléfono</label>
+                                <input type="telefono" id="telefono" name="telefono" class="form-control" formControlName="telefono" placeholder="Telefono">
+                                <div *ngIf="abmusuario.get('telefono')?.invalid && (abmusuario.get('telefono')?.dirty || abmusuario.get('telefono')?.touched)" class="text-danger">
+                                    {{ getErrorMessage('telefono') }}
+                                </div>
+                            </div>
+                            <div class="col-md-9 mt-1 text-left">
+                                <label for="dni" class="form-label">Documento</label>
+                                <input type="dni" id="dni" name="dni" class="form-control" formControlName="dni" placeholder="dni">
+                                <div *ngIf="abmusuario.get('dni')?.invalid && (abmusuario.get('dni')?.dirty || abmusuario.get('dni')?.touched)" class="text-danger">
+                                    {{ getErrorMessage('dni')}}
+                                </div>
+                            </div>
+                            <div class="col-md-9 mt-1 text-left">
+                                <label for="edad" class="form-label">Edad</label>
+                                <input type="edad" id="edad" name="edad" class="form-control" formControlName="edad" placeholder="Edad">
+                                <div *ngIf="abmusuario.get('edad')?.invalid && (abmusuario.get('edad')?.dirty || abmusuario.get('edad')?.touched)" class="text-danger">
+                                    {{ getErrorMessage('edad') }}
+                                </div>
+                            </div>
+                            <div class="col-md-9 mt-1 text-left">
+                                <label for="sexo" class="form-label">Sexo</label>
+                                <select id="sexo" name="sexo" class="form-control" formControlName="sexo" placeholder="Sexo">
+                                    <option value="masculino">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <div *ngIf="abmusuario.get('sexo')?.invalid && (abmusuario.get('sexo')?.dirty || abmusuario.get('sexo')?.touched)" class="text-danger">
+                                    {{ getErrorMessage('sexo') }}
+                                  </div>
+                            </div>
+                            <div class="col-md-9 mt-1 text-left">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" id="password" name="password" class="form-control" formControlName="password" placeholder="Password">
+                                <div *ngIf="abmusuario.get('password')?.invalid && (abmusuario.get('password')?.dirty || abmusuario.get('password')?.touched)" class="text-danger">
+                                    {{ getErrorMessage('password') }}
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </form>
+                <form [formGroup]="abmprofesor" *ngIf="mybuttonId == 2">
+                    <div class="row justify-content-center">
+                        <div class="toggle-container">
+                  
+                            <div class="col-md-9 mt-1 text-left">
+                                <label for="titulo" class="form-label">Título</label>
+                                <input type="titulo" id="titulo" name="titulo" class="form-control" formControlName="titulo" placeholder="Título">
+                            </div>
+                            <div class="col-md-9 mt-1 text-left">
+                                <label for="disponibilidad" class="form-label">Disponibilidad</label>
+                                <input type="disponibilidad" id="disponibilidad" name="disponibilidad" class="form-control" formControlName="disponibilidad" placeholder="Disponibilidad">
+                                <div *ngIf="abmprofesor.get('disponibilidad')?.invalid && (abmprofesor.get('disponibilidad')?.dirty || abmprofesor.get('disponibilidad')?.touched)" class="text-danger">
+                                    {{ getErrorMessage('disponibilidad') }}
+                                </div>
+                            </div>
+                        </div>                        
+
+                    </div>
+                </form>
+                <div class="col-md-12 mt-3 text-center"> 
+                    <button class="btn btn-danger"(click)="submit()">Guardar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

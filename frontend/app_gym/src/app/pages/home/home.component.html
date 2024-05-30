@@ -1,0 +1,20 @@
+<app-navegacion></app-navegacion>
+       <!-- Aca va la imagen de fondo --->
+    <div class="background-image">
+        <div class="esquina">
+       <!-- Aca va el logo de la esquina --->     
+            <img src="assets/mano-sosteniendo-mancuernas-mancuernas.png" alt="logo">
+        </div>
+        
+        <div *ngIf="!isToken">
+            <app-mainmenu></app-mainmenu>
+        </div>
+            
+        
+        <div *ngIf="isToken">
+            <app-loggedin></app-loggedin>
+        </div>
+
+    </div>
+ <app-footer></app-footer>
+  

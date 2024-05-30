@@ -1,0 +1,99 @@
+
+/* Ajustar estilos de los cards */
+.card {
+    margin-bottom: 20px;
+    background-color: rgb(17, 14, 14);
+    opacity: 1.0;
+    border: groove;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Defino como se va a mostrar el texto del centro en comparacion con la foto de la esquina  */
+
+.esquina {
+  display: flex;
+  align-items: center; /* Alineado verticalmente */
+}
+
+.text-right {
+  margin-left: 500px; /* Que tan a la derecha se va a mostrar en comparacion con el texto */
+}
+
+
+/* Este es el logo de la esquina*/
+
+  .esquina img {
+    height:300px ;
+    width: 300px;
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/*este es el texto de titulo en la vista*/
+.col-md-7 h2 {
+  font-family: 'Praise', sans-serif; /* Replace 'Your Font' with the desired font name */
+  font-size: 120px; /* Adjust the font size as needed */
+  /* Add any other styling you desire */
+  display: flex;
+  justify-content: center;
+}
+
+/* Opcional: Aca irian las fotos que van a la izquierda y derecha del texto profesores*/
+
+.float-left {
+  float: left;
+  margin-right: 10px; /* Espaciado del margen  derecho*/
+}
+
+
+.float-right {
+  float: right;
+  margin-left: 100px; /* Espaciado del margen izquierdp */
+}
+
+
+
+
+
+/*Con este estilo limito la imagen a la resolucion deseada para mostrar*/
+img.rounded-circle {
+  max-width: 500px; /* Anchura */
+  max-height: 400px; /* Altura */
+}
+
+
+
+/* Cambiar el color del texto de las cards */
+.card-title {
+    color: #666666;
+}
+
+.card-text {
+    color: #bbbbbb;
+
+}
+
+/* Estilos para el footer */
+.footer {
+    text-align: center;
+    background-color: #000000;
+    border-top: 1px solid #000000;
+}
+
+
+
+.welcome-text:hover::before {
+    transform: scaleX(1);
+}
+
+.welcome-text h1 {
+    -webkit-text-stroke: 1px black; /* Borde negro de 2px */
+    color: transparent; /* Hace que el texto sea transparente */
+}

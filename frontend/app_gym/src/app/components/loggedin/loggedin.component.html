@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="title-with-image">
+
+                <h1>¡Bienvenido!</h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 text-center welcome-text">
+
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div *ngIf="decodeToken() === 'admin' || decodeToken() === 'profesor'" class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <a class="nav-link" (click)="redirectToAlumnos()">Alumnos</a>
+               </div>
+            </div>
+        </div>
+        <div *ngIf="decodeToken() === 'admin' || decodeToken() === 'profesor'" class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                     <a class="nav-link" routerLink="/clases-todas">Clases</a>
+                </div>
+            </div>
+</div>
+<div class="container mt-2">
+        </div>
+        <div *ngIf="decodeToken() === 'admin'" class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <a class="nav-link" (click)="redirectToProfesores()">Profesores</a>
+               </div>
+            </div>
+        </div>
+        <div *ngIf="decodeToken() === 'admin'" class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <a class="nav-link" routerLink="/pagos-admi">Pagos</a>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 text-center welcome-text">
+
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div *ngIf="decodeToken() === 'alumno'" class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <a class="nav-link" routerLink="/rutina-abm">Mis Rutinas</a>
+               </div>
+            </div>
+        </div>
+</div>

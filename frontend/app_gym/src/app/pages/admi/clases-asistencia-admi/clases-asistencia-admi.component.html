@@ -1,0 +1,52 @@
+<app-navegacion></app-navegacion>
+ <!-- Aca va la imagen de fondo --->
+<div class="background-image">
+    <div class="esquina">
+        <img src="assets/mano-sosteniendo-mancuernas-mancuernas.png" alt="logo">
+    </div>
+ 
+    <div class="container mt-5">
+
+            <div class="col-md-8 offset-md-2 text-center welcome-text">
+                <h1 class="card-title text-center">Clases</h1>
+            </div>
+        <div class="row mt-5">
+            <div class="col-md-4">
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-block1">
+                            <div class="row">
+                                <!-- Content for the first card -->
+                            </div>
+                        </div>
+                        
+                        <div *ngIf="decodeToken() === 'admin'"  class="col-md-4"  >
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control" [(ngModel)]="search_value"  placeholder="Ingrese el nombre o apellido del alumno...">
+                                <div class="input-group-append">
+                                    <button class="card btn btn-danger btn-lg" type="button" (click)="capture_search_value(search_value)">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+          
+                        <div  *ngIf= "showVerAlumnos">
+                            <app-ver-asistencia [someInput]="changingValue" (someOutput)="editflag = $event"></app-ver-asistencia>
+                        </div>
+
+                        <!-- Text Pane 1 -->
+                        <div class="card-text">
+                            <h3>Alumnos:</h3>
+                        </div>
+
+                        <app-lista-asistencia [classeditInput]="editflag "></app-lista-asistencia>
+                    
+                    </div>
+                </div>
+         
+            </div>
+
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

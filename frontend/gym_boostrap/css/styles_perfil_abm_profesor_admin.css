@@ -1,0 +1,151 @@
+/* Establecer el fondo de imagen */
+.background-image {
+  background-image: url('gym.jpg')  ; /* Reemplaza con la ruta de tu imagen de fondo */
+
+  /* le doy el efecto  de transparencia blanca*/
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 0px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  padding-left: 10px;
+/* Agregar un espacio arriba,  izquierda y derecha*/
+}
+
+.card h1{
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #000000;
+}
+
+
+
+/* Ajustar estilos de los cards */
+.card {
+  margin-bottom: 10px;
+  background-color: rgb(226, 223, 223);
+  opacity: 1.0;
+  border: groove;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+/*  le doy el borde redondo a la foto */
+.rounded-circle {
+  border-radius: 20% !important;
+}
+
+/* Este es el logo de la esquina*/
+.esquina img {
+height:200px ;
+width: 200px;
+position: relative;
+top: 0;
+right: 0;
+height: 75%;
+}
+
+.btn-danger {
+color: #fff;
+background-color: #dd1b2f;
+border-color: #d10e21;
+width: 75%; 
+
+}
+.label {
+
+position: left;
+padding-left: 0px;
+color: #000000; 
+font-weight: bold;
+
+}
+.toggle-container  {
+color: #0e0a0a4f;
+background-color: #e4d9d9;
+border-color: #050000;
+width: 90%;
+}
+
+
+.card1 {
+margin-bottom: 10px;
+background-color: rgb(207, 63, 63);
+opacity: 1.0;
+border: groove;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+width: 15%;
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Cambiar el color del texto de las cards */
+.card-title {
+  color: #000000;
+}
+
+.card-text {
+  color: #000000;
+
+}
+
+/* Estilos para el footer */
+.footer {
+  text-align: center;
+  background-color: #000000;
+  border-top: 1px solid #000000;
+}
+
+
+
+
+
+/* amplio el cuadro de texto que contiene a los parrafos de bienvenida */
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  max-width: 1520px;
+}
+
+
+
+/* longitud a lo ancho del texto de bienvenida */
+.col-md-8 {
+  flex: 0 0 auto;
+  width: 99.66666667%;
+  color: rgba(186, 175, 175);
+  margin-bottom: 20px;
+}
+
+/* tamaño del texto resaltado */
+.lead {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.welcome-text:hover::before {
+  transform: scaleX(1);
+}
+
+
+/*  fuente para el texto de bienvenida*/
+.col-md-10 {
+font-family: 'Praise', sans-serif; /* Replace 'Your Font' with the desired font name */
+/* Add any other styling you desire */
+display: flex;
+justify-content: left;
+}
+
+.row.justify-content-center{
+  --bs-gutter-y: 0.5rem;
+}
+
+
+.h1, h1 {
+font-size: 6rem;
+color:  rgb(243, 0, 0) ;
+}

@@ -1,0 +1,9 @@
+<ul class="list-group mt-3">
+    <li class="list-group-item d-flex justify-content-between align-items-center custom-rutina" *ngFor="let asistencia of arrayAsistencia">
+        {{asistencia.id_Usuario}} : {{asistencia.apellido}}   {{asistencia.nombre}} 
+        <div *ngIf="decodeToken() === 'admin'">
+            <button class="btn btn-danger btn-sm delete-btn" (click)="borrarIdClase(asistencia.id_Usuario)"><i class="fa-solid fa-trash"></i></button>       
+        </div>    
+    </li>
+</ul>
+  
